@@ -1,0 +1,4 @@
+Upload fild
+hadoop fs -put ~<Input Path> <Output Path>
+Compiling Java code
+mkdir <you java classes>
