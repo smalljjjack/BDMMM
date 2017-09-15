@@ -2,3 +2,4 @@ Upload fild
 hadoop fs -put ~<Input Path> <Output Path>
 Compiling Java code
 mkdir <you java classes>
+Zip Jar javac -classpath/ usr/share/hadoop/hadoop-core-1.2.1.jar <Your classes> ./ <Your.java>
