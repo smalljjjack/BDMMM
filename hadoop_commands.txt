@@ -6,3 +6,5 @@ Zip Jar javac -classpath/ usr/share/hadoop/hadoop-core-1.2.1.jar <Your classes> 
         jar -cvf ./<your>.jar -C your classes/ .
         
  Run hadoop jar./<Your jar> <InputPath><OutputPath>(The input path depends your input file)
+get your put put
+hadoop fs -get<OutputPath> ~<The path you want>
