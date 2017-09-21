@@ -14,4 +14,4 @@ get your put put
 hadoop fs -get<OutputPath> ~<The path you want>
 
 Delete Documents from hdfs
-hadoop
+hadoop fs -rmr <Path>
