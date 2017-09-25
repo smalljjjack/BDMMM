@@ -1,0 +1,14 @@
+1. Created a "Configuration" object to setup a job (Find Friends)
+2. Check if appropriate command line arguments have been passed for the query as required, if not display error and exit the code.
+3. Created Two Mapper Class (MyPageQ3) and (AccessLogQ3) to join the DataSets to achieve the desired result.
+4. Created One Reducer in "setNumReduceTasks"
+5. Since the Input File is CSV, stored each value from the tuple in a String array. This method is followed in both the Mapper classes.
+6. In mapper "MyPageQ3" we pass the ID and the Name fields from the tuple.
+7. In mapper "AccessLogQ3" we pass the "WhatPage" field and the count as "1" for each tuple. This is required to identify the total count of all the pages that have been accessed totally.
+8. In the Reducer we find the count of whatPage accessed and store it in hashmap with the Name of the corressponding tuple as the key value and the sum of total occurences of that page in the AccessLog "whatPage" field as the sum.
+9. The Reducer class has a CleanUp method. The clean method is used to sort the hashmap based on the values in descending order.
+10. Top 10 values of the Reversed sorted hashmap are then displayed as the top 10 Pages.
+
+Command: hadoop jar Query3.jar 'packageName'.Query3 InputFileName1' 'InputFileName2''OutputFileName'
+InputFileName1: MyPage.csv
+InputFileName2: AccessLog.csv
