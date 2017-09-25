@@ -1,0 +1,13 @@
+1. Created a "Configuration" object to setup a job  (JobForQuery1)
+2. Took command line argument $0 from Terminal to ask the user to enter the "Nationality".
+3. Check if appropriate command line arguments (3 in this case)have been passed for the query as required, if not display error and exit the code.
+4. Created One Mapper Class (MyPageQ1) to achieve the desired result.
+5. Set Variables "Name" and "Hobby" to store the name and hobby from the tuple received to the map.
+6. Since the Input File is CSV, stored each value from the tuple in a String array.
+7. Assigned the name and the hobby fields extracted from the tuple to the variables "Name" and "Hobby".
+8. Put a checker to check if the Nationality in the tuple been read is same as the one entered by the user on the Terminal.
+9. If the Nationality is same then write the Context (name and hobby fields of the tuple) else ignore the tuple.
+
+Command: hadoop jar Query1.jar 'packageName'.Query1 'Nationality' 'InputFileName' 'OutputFileName'
+InputFileName: MyPage.csv
+
