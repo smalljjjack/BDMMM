@@ -1,0 +1,13 @@
+1. Created a "Configuration" object to setup a job (JobForQuery2)
+2. Check if appropriate command line arguments have been passed for the query as required, if not display error and exit the code.
+3. Created One Mapper Class (MyPageQ2) to achieve the desired result.
+4. Created One Mapper Class (IntSumReducer).
+5. Created One Reducer in "setNumReduceTasks"
+6. Since the Input File is CSV, stored each value from the tuple in a String array.
+7. Assigned the Nationality field from the tuple to string "Name" and passed the value as "1" in the Context write.
+8. The Reducer now recieves the Key value as Nationailty and the individual values corresponding to the Nationality. 
+9. The values for the Nationality are added in the Reducer to find the total number of people for a given Nationality and write the 	Nationality and its count.
+
+Command: hadoop jar Query2.jar 'packageName'.Query2 'InputFileName1' 'OutputFileName'
+InputFileName1: MyPage.csv
+
