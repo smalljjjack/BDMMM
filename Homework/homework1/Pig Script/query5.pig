@@ -1,0 +1,14 @@
+MyPage = LOAD 'AssignmentInput/myPage.csv' USING PigStorage(',') AS (ID:int,Name:chararray,Nationality:chararray,CountryCode:int,Hobby:chararray);
+AccessLog = LOAD 'AssignmentInput/AccessLog.csv' USING PigStorage(',') AS (AccessId:int,ByWho:int,WhatPage:int,TypeOfAccess:chararray,AccessTime:int);
+mainPage = JOIN AccessLog by ByWho,MyPage BY ID;
+totalCount = FOREACH mainPage GENERATE Name,ByWho;
+totalCountGroup =Group totalCount By Name;
+counterForAccess = FOREACH totalCountGroup Generate group AS Name,COUNT($1) as tCount;
+whatPage = FOREACH mainPage GENERATE Name,WhatPage;
+uniqueValues = DISTINCT whatPage;
+whatPageGroup = GROUP uniqueValues BY Name;
+DistCount= FOREACH whatPageGroup Generate group AS Name,COUNT($1);
+DistFinal = FOREACH DistCount  GENERATE $0 as ID, $1 as UC;
+FinalJoin = JOIN counterForAccess BY Name, DistFinal by ID;
+Final= FOREACH FinalJoin GENERATE Name,tCount, UC;
+store Final into 'pigOutput5' USING PigStorage(',');
