@@ -1,0 +1,16 @@
+1. Created a "Configuration" object to setup a job (JobForQuery6)
+2. Check if appropriate command line arguments have been passed for the query as required, if not display error and exit the code.
+3. Created Three Mapper Class (myPageQ6),(FriendsQ6) and (AccessLogQ6) to join the DataSets to achieve the desired result.
+4. Created One Reducer in "setNumReduceTasks" to 1.
+5. Since the Input File is CSV, stored each value from the tuple in a String array. This method is followed in all the Mapper classes.
+6. In mapper "myPageQ6" we pass the ID and the Name fields from the tuple.
+7. In Mapper FriendsQ6 we pass the "PersonId" as the key and the "MyFriend" field as the value.
+8. In mapper "AccessLogQ6" we pass the "ByWho" field as key and "WhatPage" field as the value and the count as "1" for each tuple. This is   required to identify what pages the user has accessed.
+9. In the Reducer "IntSumReducer" we use a ArrayList to first traverse through all the "Friends values" for the key and insert all the values in the list. Next we run another for each loop and traverse through all the "ByWhat values" (accessed pages for the key) and now in this case we check for each if it is present in the arraylist already if yes we remove that element from the array list. By this we will have all the element that the user added as a friend by never accessed their pages.
+10. The Reducer class then writes the Name and the total number of pages unaccessed inspite of adding as a friend to be the key value output.
+
+
+Command: hadoop jar Query6.jar samp.Query6 'InputFileName1' 'InputFileName2' 'InputFileName3' 'OutputFileName'
+InputFileName1: MyPage.csv
+InputFileName2: Friends.csv
+InputFileName3: AccessLog.csv
