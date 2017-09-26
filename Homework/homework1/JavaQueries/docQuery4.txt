@@ -1,0 +1,14 @@
+1. Created a "Configuration" object to setup a job (JobForQuery4)
+2. Check if appropriate command line arguments have been passed for the query as required, if not display error and exit the code.
+3. Created Two Mapper Class (MyPageQ4) and (FriendsQ4) to join the DataSets to achieve the desired result.
+4. Created One Reducer in "setNumReduceTasks" to 1.
+5. Since the Input File is CSV, stored each value from the tuple in a String array. This method is followed in both the Mapper classes.
+6. In mapper "MyPageQ4" we pass the ID and the Name fields from the tuple.
+7. In mapper "FriendsQ4" we pass the "MyFriend" field and the count as "1" for each tuple. This is required to identify the total count of all the MyFriends Pages.
+8. In the Reducer "IntSumReducer" we find the sum of Myfriend field occurences and store it.
+9. The Reducer class then writes the Name and the sum as the key value output.
+10. And we are listed with the Name of the person and the number of people listing him/her as a friend.
+
+Command: hadoop jar Query4.jar samp.Query4 'InputFileName1' 'InputFileName2' 'OutputFileName'
+InputFileName1: MyPage.csv
+InputFileName2: Friends.csv
