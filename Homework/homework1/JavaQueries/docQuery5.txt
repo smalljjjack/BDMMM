@@ -1,0 +1,14 @@
+1. Created a "Configuration" object to setup a job (JobForQuery5)
+2. Check if appropriate command line arguments have been passed for the query as required, if not display error and exit the code.
+3. Created Two Mapper Class (myPageQ5) and (AccessLogQ5) to join the DataSets to achieve the desired result.
+4. Created One Reducer in "setNumReduceTasks" to 1.
+5. Since the Input File is CSV, stored each value from the tuple in a String array. This method is followed in both the Mapper classes.
+6. In mapper "myPageQ5" we pass the ID and the Name fields from the tuple.
+7. In mapper "AccessLogQ5" we pass the "ByWho" field as key and "WhatPage" field as the value and the count as "1" for each tuple. This is required to identify the total count of all the MyFriends Pages.
+8. In the Reducer "IntSumReducer" we find the sum of whatPage field ans also we declare a "SET" and insert the values corresponding to the key to obtain unique values for the key which will help us calculate the unique number of accesses the user made.
+9. The Reducer class then writes the Name and the total accesses(sum) and unique accessed(set.size) as the key value output.
+10. And we are listed with the Name of the person and the number of total accesses and the unique accesses he has made.
+
+Command: hadoop jar Query5.jar samp.Query5 'InputFileName1' 'InputFileName2' 'OutputFileName'
+InputFileName1: MyPage.csv
+InputFileName2: AccessLog.csv
