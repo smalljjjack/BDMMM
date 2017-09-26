@@ -1,0 +1,4 @@
+In our opinion, a person who is follower by more person is more popular, that's mean if a person has been listed as friends by others. He/she is more popular.
+SO in the map process, we set output key is friendsId and vaule is 1. It's reperesnt than the ID has been listed by other as friends once.
+Them in the reduce process, we could the number of how many user list a specific user as friend.
+In clean up step, we get the average level of friends. And loop the map, output those users have been listed as friend more than the average level. 
