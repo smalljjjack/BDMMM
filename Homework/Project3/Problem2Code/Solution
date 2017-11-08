@@ -1,0 +1,5 @@
+This file including two solution.
+
+In the problem 2, we need to calculate the relative density of supercell and its neighbors average density.
+
+In order to get the result. The firstt step is to calculate all cells' density. 
