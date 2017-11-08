@@ -1,0 +1,4 @@
+For the problem 1, we need to use the SpakrSQL query the transcation data set.
+I mainly used the SparkSQL table and query table method to conduct our tasks.
+SparkSQL is a very powerful tool. Through transforming the file to table frame, we can simply use the SQL command do any query, its very
+effective and convincence.
