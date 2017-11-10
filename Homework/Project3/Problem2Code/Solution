@@ -8,3 +8,5 @@ The second step is to map the density result to a structure that (ID, (slef dens
 And with the reducer, we can get the all information about the self_density and neighbor_avg_density for each specific cell.
 
 Then by using the sortby function, I sorted the cells with their self_density, and output the 100 cells which have the highest density.
+
+The third step, we will combine each cell with its neighbors
