@@ -5,4 +5,6 @@ In the problem 2, we need to calculate the relative density of supercell and its
 In order to get the result. The firstt step is to calculate all cells' density. 
 
 The second step is to map the density result to a structure that (ID, (slef density, neighbor density/neighbor size))
-And with the reducer, we can get the all information about the self_density and neighbor_avg_density for each specific
+And with the reducer, we can get the all information about the self_density and neighbor_avg_density for each specific cell.
+
+Then by using
