@@ -9,4 +9,4 @@ And with the reducer, we can get the all information about the self_density and 
 
 Then by using the sortby function, I sorted the cells with their self_density, and output the 100 cells which have the highest density.
 
-The third step, we will combine each cell's density with its neighbors'. The data structure will like (SlefId,(selfID, slefDensity))
+The third step, we will combine each cell's density with its neighbors'. The data structure will like (SlefId,(selfID, slefDensity),List((neighbor),()..))
