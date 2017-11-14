@@ -13,4 +13,4 @@ The third step, we will combine each cell's density with its neighbors'. The dat
 
 The four step will sorted the above data with the slefDensity.
 
-Finally we will output the cells with top 100 density.
+Finally we will output the cells with top 100 density. And 
